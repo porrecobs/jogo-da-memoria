@@ -71,6 +71,18 @@ function limparValores() {
   segundaCarta = null;
 }
 
+function iniciarJogo() {
+  var jogo = document.getElementById('jogo');
+  var texto = document.getElementById('textoInicial');
+
+  jogo.classList.remove('hide');
+  texto.classList.add('hide');
+  texto.style.display = "none";
+  setTimeout(() => {
+    
+  }, 500);
+}
+
 
 
 

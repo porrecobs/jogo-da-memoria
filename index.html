@@ -6,11 +6,35 @@
 </head>
 
 <body>
-  <!--                                               -->
+  
+  <!--                                            --> 
+
+  <section class="jogo texto" id="textoInicial">
+    <h1></h1>
+    <div class="img-container">
+      <img src="./logo.png" class="logo" />
+    </div>
+    <p>Autora: Fernanda Pereira-Silva (Mestre em Ciências)</p>
+    <p style="margin-top: 10px;">
+      Arte e Design: Debora Santos Oliveira (Licencianda em Artes)
+    </p>
+      
+    <p style="margin-top: 30px;">
+      Jogo da memória em formato online formado por figuras e pequenos trechos narrativos oriundos das histórias de vida de pacientes com doença de Chagas. Parte de uma dissertação de mestrado, o jogo foi desenvolvido com o objetivo de informação e educação em saúde através das histórias de vida de pessoas com doença de Chagas. 
+    </p>  
+    <p style="margin-top: 10px;">
+      Apropriado para todas as idades. 
+    </p>
+      <p style="margin-top: 10px;">
+      Vamos falar de Chagas com o jogo da memória “A nossa memória de Chagas”!</p>
+    
+    <div class="button" style="width: 100%; text-align: center; height: 60px;">
+      <button style="width: 100%; max-width: 400px; background-color: #1C7CCC; color: white; height: 50px; border: none; border-radius: 4px; font-size: 20px; margin-top: 25px; cursor: pointer;" onClick="iniciarJogo()"> Vamos começar </button>
+    </div>
+  </section>
 
 
-
-  <section class="jogo">
+  <section class="jogo hide" id="jogo">
     <!-- roça -->
     <div class="cartao" data-valor="roça">
       <div class="front">
@@ -18,7 +42,9 @@
         <p>"Trabalhava na roça [...]</p>
       </div>
       <div class="back">
-        <img src="carta-4.jpg">
+        <div class="container-back-content">
+          <img src="logo-carta.png">
+        </div>
       </div>
     </div>
     <div class="cartao" data-valor="roça">
@@ -27,7 +53,9 @@
         <p>"Trabalhava na roça [...]</p>
       </div>
       <div class="back">
-        <img src="carta-4.jpg">
+        <div class="container-back-content">
+          <img src="logo-carta.png">
+        </div>
       </div>
     </div>
     </div>
@@ -39,7 +67,9 @@
         <p>"[...] essa ingrata doença em mim."</p>
       </div>
       <div class="back">
-        <img src="carta-4.jpg">
+        <div class="container-back-content">
+          <img src="logo-carta.png">
+        </div>
       </div>
     </div>
 
@@ -49,7 +79,9 @@
         <p>"[...] essa ingrata doença em mim."</p>
       </div>
       <div class="back">
-        <img src="carta-4.jpg">
+        <div class="container-back-content">
+          <img src="logo-carta.png">
+        </div>
       </div>
     </div>
 
@@ -61,7 +93,9 @@
         <p>"quando eu descobri, foi um choque... essa doença, Chagas"</p>
       </div>
       <div class="back">
-        <img src="carta-4.jpg">
+        <div class="container-back-content">
+          <img src="logo-carta.png">
+        </div>
       </div>
     </div>
 
@@ -71,7 +105,9 @@
         <p>"quando eu descobri, foi um choque... essa doença, Chagas"</p>
       </div>
       <div class="back">
-        <img src="carta-4.jpg">
+        <div class="container-back-content">
+          <img src="logo-carta.png">
+        </div>
       </div>
     </div>
 
@@ -82,7 +118,9 @@
         <p>"Eu nunca carreguei essa doença como um peso dos maiores não"</p>
       </div>
       <div class="back">
-        <img src="carta-4.jpg">
+        <div class="container-back-content">
+          <img src="logo-carta.png">
+        </div>
       </div>
     </div>
 
@@ -92,7 +130,9 @@
         <p>"Eu nunca carreguei essa doença como um peso dos maiores não"</p>
       </div>
       <div class="back">
-        <img src="carta-4.jpg">
+        <div class="container-back-content">
+          <img src="logo-carta.png">
+        </div>
       </div>
     </div>
 
@@ -104,7 +144,9 @@
         <p>Eu fui doar sangue [...] me chamaram até o posto de saúde [...] eu tinha Chagas"</p>
       </div>
       <div class="back">
-        <img src="carta-4.jpg">
+        <div class="container-back-content">
+          <img src="logo-carta.png">
+        </div>
       </div>
     </div>
     <div class="cartao" data-valor="sangue">
@@ -113,7 +155,9 @@
         <p>Eu fui doar sangue [...] me chamaram até o posto de saúde [...] eu tinha Chagas"</p>
       </div>
       <div class="back">
-        <img src="carta-4.jpg">
+        <div class="container-back-content">
+          <img src="logo-carta.png">
+        </div>
       </div>
     </div>
 
@@ -125,7 +169,9 @@
         <p>"[...] lembro que minha casa era de sapê, as paredes de barro, de reboco [...]"</p>
       </div>
       <div class="back">
-        <img src="carta-4.jpg">
+        <div class="container-back-content">
+          <img src="logo-carta.png">
+        </div>
       </div>
     </div>
     <div class="cartao" data-valor="casa">
@@ -134,7 +180,9 @@
         <p>"[...] lembro que minha casa era de sapê, as paredes de barro, de reboco [...]"</p>
       </div>
       <div class="back">
-        <img src="carta-4.jpg">
+        <div class="container-back-content">
+          <img src="logo-carta.png">
+        </div>
       </div>
     </div>
 
@@ -147,7 +195,9 @@
         <p>"Deus, me dá força! Jesus, eu quero viver!"</p>
       </div>
       <div class="back">
-        <img src="carta-4.jpg">
+        <div class="container-back-content">
+          <img src="logo-carta.png">
+        </div>
       </div>
     </div>
     <div class="cartao" data-valor="reza">
@@ -156,7 +206,9 @@
         <p>"Deus, me dá força! Jesus, eu quero viver!"</p>
       </div>
       <div class="back">
-        <img src="carta-4.jpg">
+        <div class="container-back-content">
+          <img src="logo-carta.png">
+        </div>
       </div>
     </div>
 
@@ -168,7 +220,9 @@
         <p>"Às vezes a gente acordava e sentia aquelas picadas, aí matava, mas não sabia de onde vinha"</p>
       </div>
         <div class="back">
-          <img src="carta-4.jpg">
+          <div class="container-back-content">
+            <img src="logo-carta.png">
+          </div>
         </div>
       </div>
       <div class="cartao" data-valor="cama">
@@ -178,7 +232,9 @@
         <p>"Às vezes a gente acordava e sentia aquelas picadas, aí matava, mas não sabia de onde vinha"</p>
       </div>
         <div class="back">
-          <img src="carta-4.jpg">
+          <div class="container-back-content">
+            <img src="logo-carta.png">
+          </div>
         </div>
       </div>
      
@@ -190,7 +246,9 @@
         <p>Eu levei muito tempo só sabendo que tenho o coração crescido e pronto"</p>
       </div>
         <div class="back">
-          <img src="carta-4.jpg">
+          <div class="container-back-content">
+            <img src="logo-carta.png">
+          </div>
         </div>
       </div>
       <div class="cartao" data-valor="coraçao">
@@ -200,7 +258,9 @@
         <p>Eu levei muito tempo só sabendo que tenho o coração crescido e pronto"</p>
       </div>
         <div class="back">
-          <img src="carta-4.jpg">
+          <div class="container-back-content">
+            <img src="logo-carta.png">
+          </div>
         </div>
       </div>
      
@@ -214,7 +274,9 @@
         <p>"Bonequinhas de sabugo de milho [...] isso era vida boa"</p>
       </div>
         <div class="back">
-          <img src="carta-4.jpg">
+          <div class="container-back-content">
+            <img src="logo-carta.png">
+          </div>
         </div>
       </div>
       <div class="cartao" data-valor="brincando">
@@ -223,7 +285,9 @@
         <p>"Bonequinhas de sabugo de milho [...] isso era vida boa"</p>
       </div>
         <div class="back">
-          <img src="carta-4.jpg">
+          <div class="container-back-content">
+            <img src="logo-carta.png">
+          </div>
         </div>
       </div>
      

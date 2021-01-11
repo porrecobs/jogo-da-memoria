@@ -50,15 +50,7 @@ body {
 }
 
 .cartao.flip {
-  transform: rotateY(180deg)
-  /* scale(2);*/
-  /*bottom: 200px;
-  position: absolute;
-  z-index: 1;*/
-}
-
-.cartao.segunda-carta {
-  /*right: 100px;*/
+  transform: rotateY(180deg);
 }
 
 .front, .back {
@@ -100,7 +92,7 @@ body {
   height: auto; 
   width: 100%;
   max-width: 400px;
-  
+  margin: 0 auto;
 }
 
 

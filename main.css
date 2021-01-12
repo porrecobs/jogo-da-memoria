@@ -67,11 +67,8 @@ body {
   border-radius: 5px;
   background: #FFF;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   z-index: 1;
-}
-
-.front {
-  visibility: hidden;
 }
 
 .cartao.flip .back {
@@ -94,7 +91,6 @@ body {
 }
 
 .front {
-  visibility: visible;
   transform: rotateY(180deg);
 }
 

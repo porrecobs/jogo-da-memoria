@@ -67,12 +67,19 @@ body {
   border-radius: 5px;
   background: #FFF;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   z-index: 1;
+}
+
+.cartao.flip .back {
+  visibility: hidden;
+  transition: visibility .1s;
 }
 
 .front img {
   width: 100%;
   height: auto;
+  z-index: 2;
 }
 
 .back {

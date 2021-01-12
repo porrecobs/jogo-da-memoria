@@ -70,6 +70,10 @@ body {
   z-index: 1;
 }
 
+.front {
+  visibility: hidden;
+}
+
 .cartao.flip .back {
   visibility: hidden;
   transition: visibility .1s;
@@ -90,6 +94,7 @@ body {
 }
 
 .front {
+  visibility: visible;
   transform: rotateY(180deg);
 }
 

@@ -72,7 +72,7 @@ body {
 
 .cartao.flip .back {
   visibility: hidden;
-  transition: visibility .2s;
+  transition: visibility .1s;
 }
 
 .front img {

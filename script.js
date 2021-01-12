@@ -1,4 +1,5 @@
-var cards = document.querySelectorAll('.cartao');
+var card = document.querySelectorAll('.cartao');
+var cards = [...card];
 
 var temCartaVirada = false;
 var tabuleiroBloqueado = false;

@@ -61,6 +61,7 @@ body {
   border-radius: 5px;
   background: #FFF;
   backface-visibility: hidden;
+  z-index: 1;
 }
 
 .front img {

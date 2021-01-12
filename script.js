@@ -1,5 +1,6 @@
 var card = document.querySelectorAll('.cartao');
 var cards = [...card];
+var cartasSelecionadas = [];
 
 var temCartaVirada = false;
 var tabuleiroBloqueado = false;
@@ -30,13 +31,32 @@ function virarCarta() {
   
 } 
 
-cards.forEach(item => item.addEventListener('click', virarCarta)
-); //para cada carta adicionar requisicao virarCarta no click
 
-cards.forEach(item => {
+cards.forEach(item => {  
   var posAleatoria = Math.floor(Math.random() * 6);
   item.style.order = posAleatoria;
 }); //para cada carta gerar um numero aleatorio para trocar a ordem das cartas
+
+for (var i = 0; i < 6;) {
+  var aux = cards[Math.floor(Math.random() * 10)];
+  if (cartasSelecionadas.indexOf(aux) < 0) {
+    cartasSelecionadas.push(aux);
+    i++;
+  }
+}
+
+
+cartasSelecionadas.forEach(item => {
+  item.classList.remove('hide');
+  var clone = item.cloneNode(true);
+  clone.style.order =  Math.floor(Math.random() * 6);
+  document.getElementById('jogo').appendChild(clone);
+});
+
+document.getElementById('jogo').childNodes.forEach(item => {
+  item.addEventListener('click', virarCarta);
+});
+
 
 function comparaCarta() {
   if (primeiraCarta.dataset.valor == segundaCarta.dataset.valor) {
@@ -73,7 +93,7 @@ function limparValores() {
 }
 
 function iniciarJogo() {
-  var jogo = document.getElementById('jogo');
+  var jogo = document.getElementById('jogo-container');
   var texto = document.getElementById('textoInicial');
 
   jogo.classList.remove('hide');

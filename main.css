@@ -73,6 +73,7 @@ body {
 .front img {
   width: 100%;
   height: auto;
+  z-index: 2;
 }
 
 .back {

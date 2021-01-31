@@ -1,10 +1,18 @@
-var card = document.querySelectorAll('.cartao');
+var card = document.querySelectorAll(".cartao");
 var cards = [...card];
 var cartasSelecionadas = [];
 
 var temCartaVirada = false;
 var tabuleiroBloqueado = false;
 var primeiraCarta, segundaCarta;
+
+var quantidadeCartoes = window.innerWidth >= 600 ? 6 : 4;
+
+console.log(window.innerWidth);
+
+var displayText = document
+  .getElementById("containerText")
+  .getElementsByTagName("p")[0];
 
 function virarCarta() {
   if (tabuleiroBloqueado) {
@@ -15,7 +23,9 @@ function virarCarta() {
     return;
   }
 
-  this.classList.add('flip');
+  displayText.innerText = this.firstElementChild.lastElementChild.innerHTML;
+
+  this.classList.add("flip");
 
   if (!temCartaVirada) {
     temCartaVirada = true;
@@ -23,21 +33,19 @@ function virarCarta() {
     return;
   } else {
     segundaCarta = this;
-    this.classList.add('segunda-carta');
+    this.classList.add("segunda-carta");
     tabuleiroBloqueado = true;
-    
+
     comparaCarta();
   }
-  
-} 
+}
 
-
-cards.forEach(item => {  
+cards.forEach((item) => {
   var posAleatoria = Math.floor(Math.random() * 6);
   item.style.order = posAleatoria;
 }); //para cada carta gerar um numero aleatorio para trocar a ordem das cartas
 
-for (var i = 0; i < 6;) {
+for (var i = 0; i < quantidadeCartoes; ) {
   var aux = cards[Math.floor(Math.random() * 10)];
   if (cartasSelecionadas.indexOf(aux) < 0) {
     cartasSelecionadas.push(aux);
@@ -45,22 +53,20 @@ for (var i = 0; i < 6;) {
   }
 }
 
-
-cartasSelecionadas.forEach(item => {
-  item.classList.remove('hide');
+cartasSelecionadas.forEach((item) => {
+  item.classList.remove("hide");
   var clone = item.cloneNode(true);
-  clone.style.order =  Math.floor(Math.random() * 6);
-  document.getElementById('jogo').appendChild(clone);
+  clone.style.order = Math.floor(Math.random() * quantidadeCartoes);
+  document.getElementById("jogo").appendChild(clone);
 });
 
-document.getElementById('jogo').childNodes.forEach(item => {
-  item.addEventListener('click', virarCarta);
+document.getElementById("jogo").childNodes.forEach((item) => {
+  item.addEventListener("click", virarCarta);
 });
-
 
 function comparaCarta() {
   if (primeiraCarta.dataset.valor == segundaCarta.dataset.valor) {
-    desabilitarCartas(); 
+    desabilitarCartas();
     return;
   } else {
     desvirarCartas();
@@ -69,18 +75,18 @@ function comparaCarta() {
 }
 
 function desabilitarCartas() {
-  primeiraCarta.removeEventListener('click', virarCarta);
-  segundaCarta.removeEventListener('click', virarCarta);
+  primeiraCarta.removeEventListener("click", virarCarta);
+  segundaCarta.removeEventListener("click", virarCarta);
   limparValores();
   return;
 }
 
 function desvirarCartas() {
   setTimeout(() => {
-    primeiraCarta.classList.remove('flip');
-    segundaCarta.classList.remove('flip');
-    segundaCarta.classList.remove('segunda-carta');
-   limparValores();
+    primeiraCarta.classList.remove("flip");
+    segundaCarta.classList.remove("flip");
+    segundaCarta.classList.remove("segunda-carta");
+    limparValores();
   }, 1000);
   return;
 }
@@ -90,20 +96,16 @@ function limparValores() {
   tabuleiroBloqueado = false;
   primeiraCarta = null;
   segundaCarta = null;
+  displayText.innerText = "";
 }
 
 function iniciarJogo() {
-  var jogo = document.getElementById('jogo-container');
-  var texto = document.getElementById('textoInicial');
+  var jogo = document.getElementById("jogo-container");
+  var texto = document.getElementById("textoInicial");
 
-  jogo.classList.remove('hide');
-  texto.classList.add('hide');
+  jogo.classList.remove("hide");
+  texto.classList.add("hide");
   texto.style.display = "none";
-  setTimeout(() => {
-    
-  }, 500);
+  window.scrollTo(0, 0);
+  setTimeout(() => {}, 500);
 }
-
-
-
-

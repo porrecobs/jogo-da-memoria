@@ -46,7 +46,7 @@ cards.forEach((item) => {
 }); //para cada carta gerar um numero aleatorio para trocar a ordem das cartas
 
 for (var i = 0; i < quantidadeCartoes; ) {
-  var aux = cards[Math.floor(Math.random() * 10)];
+  var aux = cards[Math.floor(Math.random() * 20)];
   if (cartasSelecionadas.indexOf(aux) < 0) {
     cartasSelecionadas.push(aux);
     i++;

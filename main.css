@@ -18,13 +18,15 @@ body {
 }
 
 .container-text {
-  height: 100px;
+  min-height: 150px;
   display: block;
   text-align: center;
   position: relative;
 }
 
 .container-text p {
+  width: 100%;
+  max-width: 500px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -197,12 +199,33 @@ body {
   .jogo {
     width: 800px;
   }
+}
 
-  .front p {
-    display: block;
-  }
-
+@media only screen and (max-width: 425px) {
   .cartao {
-    max-height: 260px;
+    max-width: 30vw;
+    height: 30vw;
+    padding: inherit;
+    margin: 2px;
   }
+
+  .front, .back {
+    padding: 2px;
+  }
+
+  .jogo {
+    height: 100%;
+  }
+
+  .container-text {
+    min-height: 150px;
+    width: 100%;
+    font-size: 17px;
+  }
+}
+
+#jogo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }

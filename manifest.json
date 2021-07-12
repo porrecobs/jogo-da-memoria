@@ -1,0 +1,9 @@
+{
+  "theme_color" : "#1c7ccc",
+  "background_color" : "#fafafa",
+  "display" : "minimal-ui",
+  "scope" : "/",
+  "start_url" : "/index.html",
+  "name" : "A Nossa Memoria de Chagas",
+  "short_name" : "Memoria de Chagas"
+}

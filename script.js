@@ -6,7 +6,7 @@ var temCartaVirada = false;
 var tabuleiroBloqueado = false;
 var primeiraCarta, segundaCarta;
 
-var quantidadeCartoes = window.innerWidth >= 600 ? 6 : 4;
+var quantidadeCartoes = window.innerWidth >= 600 ? 6 : 6;
 
 console.log(window.innerWidth);
 
@@ -77,7 +77,9 @@ function comparaCarta() {
 function desabilitarCartas() {
   primeiraCarta.removeEventListener("click", virarCarta);
   segundaCarta.removeEventListener("click", virarCarta);
-  limparValores();
+  setTimeout(() => {
+    limparValores();
+  }, 1000);
   return;
 }
 

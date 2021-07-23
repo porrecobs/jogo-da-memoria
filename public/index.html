@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<head>
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="./assets/img/logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+  <title>A Nossa Memória de Chagas</title>
+</head>
+
+<script>
+  // Registering our Service worker
+  if('serviceWorker' in navigator) {
+    console.log('serviceWorker', navigator);
+    navigator.serviceWorker.register('sw.js', { scope: './' })
+  }
+</script>
+
+<body>
+
+  <div class="texto" id="textoInicial">
+    <h1></h1>
+    <div class="img-container">
+      <img src="./assets/img/logo-redondo.png" class="logo" />
+    </div>
+    <p>Autora: Fernanda Pereira-Silva (Mestre em Ciências)</p>
+    <p style="margin-top: 10px;">
+      Arte e Design: Debora Santos Oliveira (Licencianda em Artes)
+    </p>
+      
+    <p style="margin-top: 30px;">
+      Jogo da memória em formato online formado por figuras e pequenos trechos narrativos oriundos das histórias de vida de pacientes com doença de Chagas. Parte de uma dissertação de mestrado, o jogo foi desenvolvido com o objetivo de informação e educação em saúde através das histórias de vida de pessoas com doença de Chagas. 
+    </p>  
+    <p style="margin-top: 10px;">
+      Apropriado para todas as idades. 
+    </p>
+      <p style="margin-top: 10px;">
+      Vamos falar de Chagas com o jogo da memória “A nossa memória de Chagas”!</p>
+    
+    <div class="button" style="width: 100%; text-align: center; height: 60px;">
+      <button class="submit-button" onClick="iniciarJogo()"> Vamos começar </button>
+    </div>
+  </div>
+
+
+  </section>
+
+  <script src="./script.js"></script>
+
+</body>
+
+</html>

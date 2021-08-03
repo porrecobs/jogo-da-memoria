@@ -50,7 +50,7 @@
   background-color: #fefefe;
   margin: auto;
   padding: 0;
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
 }
 
@@ -143,8 +143,30 @@ img.hover-shadow {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.mySlides {
+  width: 100%;
+}
+
+.mySlides > img {
+  width: 100%;
+}
+
 @media only screen and (min-width: 425px)  {
   .numbertext {
     display: block;
+  }
+
+  .modal-content {
+    width: 90%;
+  }
+
+  .mySlides {
+    width: auto;
+    height: calc(100% - 50px);
+  }
+
+  .mySlides > img {
+    width: auto;
+    height: calc(100% - 50px);
   }
 }

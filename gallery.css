@@ -1,3 +1,15 @@
+@font-face {
+  font-family: quote;
+  src: url(./assets/fonts/Quote.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: quote, 'Noto Sans', sans-serif;
+}
+
 .row > .column {
   padding: 0 8px;
 }
@@ -62,6 +74,8 @@
 /* Hide the slides by default */
 .mySlides {
   display: none;
+  text-align: center;
+  background-color: black;
 }
 
 /* Next & previous buttons */
@@ -97,10 +111,11 @@
 /* Number text (1/3 etc) */
 .numbertext {
   color: #f2f2f2;
-  font-size: 12px;
+  font-size: 25px;
   padding: 8px 12px;
   position: absolute;
   top: 0;
+  display: none;
 }
 
 /* Caption text */
@@ -126,4 +141,10 @@ img.hover-shadow {
 
 .hover-shadow:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media only screen and (min-width: 425px)  {
+  .numbertext {
+    display: block;
+  }
 }
